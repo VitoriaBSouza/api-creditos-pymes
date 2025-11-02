@@ -21,7 +21,8 @@ if settings.environment == "production":
         raise RuntimeError("PROD_DOMAIN debe estar configurado en production")
     allowed_origins = [settings.prod_domain]
 else:
-    allowed_origins = ["*"]
+    allowed_origins = ["*",
+     "https://automatic-adventure-4xvwg6r644xcj96w-5173.app.github.dev"]
 
 app.add_middleware(
     CORSMiddleware,
